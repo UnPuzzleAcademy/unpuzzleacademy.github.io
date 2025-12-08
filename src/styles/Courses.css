@@ -1,0 +1,152 @@
+.coursesPage{
+    margin:0px 30px;        
+}
+
+.heading{
+    font-size:20px;
+}
+
+.headingSection>img{
+    width:250px;
+}
+
+.headingSection{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.headingSection p{
+    font-size:15px;
+    font-weight:light;
+    color:darkslategray;
+}
+
+@media screen and (min-width:768px){
+
+    .heading{
+        font-weight: 700;
+        /*font-size:3em;*/
+        font-size:30px; 
+        letter-spacing:1px;
+    }
+
+    .headingSection{
+        margin-top:20px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        align-items:start;
+    }
+
+    .headingSection>div{
+        width:50%;
+    }
+
+    .headingSection>img{
+        width:300px;
+    }
+
+    .headingSection p{
+        font-size:15px;
+        font-weight:light;
+        color:darkslategray;
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    .heading{
+        font-weight: 700;
+        /*font-size:3em;*/
+        font-size:40px; 
+        letter-spacing:1px;
+    }
+
+    .headingSection{
+        margin-top:20px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        align-items:start;
+    }
+
+    .headingSection>div{
+        width:50%;
+    }
+
+    .headingSection>img{
+        width:450px;
+    }
+
+    .headingSection p{
+        font-size:20px;
+        font-weight:light;
+        color:darkslategray;
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    .heading{
+        font-weight: 700;
+        /*font-size:3em;*/
+        font-size:40px; 
+        letter-spacing:1px;
+    }
+
+    .headingSection{
+        margin-top:20px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        align-items:start;
+    }
+
+    .headingSection>div{
+        width:50%;
+    }
+
+    .headingSection>img{
+        width:550px;
+    }
+
+    .headingSection p{
+        font-size:20px;
+        font-weight:light;
+        color:darkslategray;
+    }
+}
+
+@media screen and (min-width:1440px){
+
+    .heading{
+        font-weight: 700;
+        /*font-size:3em;*/
+        font-size:50px; 
+        letter-spacing:1px;
+    }
+
+    .headingSection{
+        margin-top:20px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        align-items:start;
+    }
+
+    .headingSection>div{
+        width:50%;
+    }
+
+    .headingSection>img{
+        width:550px;
+    }
+
+    .headingSection p{
+        font-size:25px;
+        font-weight:light;
+        color:darkslategray;
+    }
+}
+

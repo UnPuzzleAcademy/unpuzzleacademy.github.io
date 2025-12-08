@@ -3,7 +3,12 @@ import Pages from './Pages';
 
 export let router = createBrowserRouter([
     {
-    path: "/",
-    Component: Pages.Home
-  },
+        path: "/",
+        Component: Pages.AppLayout,
+        children:[
+            {index:true, Component:Pages.Home},
+            {path:"courses", Component:Pages.Courses},
+            {path:"resources", Component:Pages.Resources}
+        ]
+    }
 ])
