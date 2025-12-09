@@ -17,6 +17,7 @@ const Home = () => {
             </div>
             <div className="heroImgSection"></div>
         </div>
+        <p>The variable is declared with <br/><code style={{fontFamily:'monospace'}}>let myVariable = 10;</code> <br/>in JavaScript.</p>
     </div>
   )
 }
