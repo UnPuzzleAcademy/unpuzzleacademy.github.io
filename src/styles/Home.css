@@ -16,17 +16,13 @@
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-
+    padding:0px 30px;
 }
 
 .heroImgSection{
     height:400px;
     width:100%;
     border:1px solid black;
-}
-
-.homePage{
-    margin:0px 30px;
 }
 
 .left>.btn{
@@ -80,6 +76,9 @@
 }
 
 @media screen and (min-width:1024px){
+    .heroSection{
+        margin-top:50px;
+    }
     .heroSection h1{
         line-height: 1.25em;
         font-size:35px;
@@ -134,16 +133,221 @@
     .heroImgSection{
         width:600px;
     }
+}
 
-    .left>.btn{
-        color:white;
-        background-color: #DC143C;
-        padding:25px 45px;
-        border:none;
-        font-size:24px;
-        border-radius:40px;
+.free-resources{
+    display:flex;
+    flex-wrap:wrap;
+    gap:50px;
+    margin-top:30px;
+    font-size:small;
+    justify-content: center;
+}
+.free-resources p:nth-child(1){
+    font-weight: bold;
+    font-size:larger;
+    margin-top:0px;
+    letter-spacing:0.4px;
+}
+.free-resources p:nth-child(2){
+    margin-bottom:30px;
+}
+.free-resources a{
+    text-decoration:none;
+    color:#e74163;
+    border:1px solid #DC143C;
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    display:inline-block;
+}
+.free-resources-section{
+    background-color: #ede5fe;
+    padding:30px;
+    margin-top:50px;
+}
+.free-resources-section>h2{
+    text-align:center;
+    font-size:x-large;
+    margin:0px;
+    color:#e74163;
+    letter-spacing: 0.3px;
+}
+.resource{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    background-color: #DC143C;
+}
+.resource>img{
+    width:100%;
+    height:100%;
+    
+}
+.free-resources>div{
+    display:flex;
+    gap:20px;
+}
+.free-resources>div>div:nth-child(2){
+    width:75%;
+}
+
+@media screen and (min-width:768px){
+    .free-resources>div{
+        width:45%;
+    }
+    .free-resources>div>div:nth-child(2){
+        width:auto;
+    }
+    .resource{
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .free-resources-section>h2{
+        font-size:30px;
+    }
+
+    .free-resources{
+        font-size:medium;
+        gap:70px;
+        margin-top:50px;
+    }
+    .free-resources>div{
+        width:45%;
+    }
+    .resource{
+        width:60px;
+        height:60px;
+    }
+
+}
+
+@media screen and (min-width:1400px){
+    .free-resources-section>h2{
+        font-size:32px;
+        letter-spacing: 0.5px;
+    }
+
+    .free-resources{
+        font-size:medium;
+        gap:70px;
+        margin-top:50px;
+    }
+    .free-resources>div{
+        width:45%;
+        gap:30px;
+    }
+    .resource{
+        width:60px;
+        height:60px;
+    }
+    .free-resources a{
+        padding:12px 30px;
+        border-radius:25px;
         font-weight:600;
-        letter-spacing:0.75px;
-        margin:15px 0px;
+        letter-spacing: 0.5px;
+    }
+    .free-resources p:nth-child(2){
+        margin-bottom:40px;
+    }
+}
+
+.paid-section{
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.paid-section>h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.paid-courses{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content: center;
+}
+.paid-course{
+    width:280px;
+    border:1px solid black;
+    border-radius:10px;
+    transition:all 200ms ease-in-out;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    cursor:pointer;
+}
+.paid-course>div:nth-child(2){
+    padding:10px;
+}
+.paid-course:hover{
+    transform:scale(1.01);
+}
+.thumbnail>img{
+    width:100%;
+}
+.paid-course-info{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.paid-course-footer{
+    margin-top:auto;
+}
+.paid-course-info>p:nth-child(1){
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+.paid-course-info>div{
+    display:flex;
+    justify-content: space-between;
+}
+.paid-course-info>div>span:nth-child(2){
+    padding:5px;
+    border-radius: 5px;
+    color:darkgreen;
+}
+
+.paid-section>a{
+    text-decoration:none;
+    color:white;
+    background-color: #DC143C;
+    padding:10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+    font-size: 16px;
+}
+
+@media screen and (min-width:425px){
+    .paid-course{
+        width:300px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .paid-section>h2{
+        font-size:30px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .paid-courses{
+        gap:50px;
+    }
+    .paid-course{
+        width:350px;
+    }
+    .paid-course-info>p:nth-child(1){
+        font-weight: 600;
+        font-size:larger;
+        letter-spacing: 0.4px;
+    }
+    .paid-course>div:nth-child(2){
+        padding:10px 25px;
     }
 }

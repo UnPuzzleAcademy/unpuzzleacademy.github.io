@@ -1,4 +1,4 @@
-.coursesPage{
+/* .coursesPage{
     margin:0px 30px;        
 }
 
@@ -26,7 +26,6 @@
 
     .heading{
         font-weight: 700;
-        /*font-size:3em;*/
         font-size:30px; 
         letter-spacing:1px;
     }
@@ -58,7 +57,6 @@
 
     .heading{
         font-weight: 700;
-        /*font-size:3em;*/
         font-size:40px; 
         letter-spacing:1px;
     }
@@ -90,7 +88,6 @@
 
     .heading{
         font-weight: 700;
-        /*font-size:3em;*/
         font-size:40px; 
         letter-spacing:1px;
     }
@@ -122,7 +119,6 @@
 
     .heading{
         font-weight: 700;
-        /*font-size:3em;*/
         font-size:50px; 
         letter-spacing:1px;
     }
@@ -148,5 +144,50 @@
         font-weight:light;
         color:darkslategray;
     }
+} */
+
+.coursesPage{
+    padding:30px;
+}
+.coursesPage>h1{
+    color:#e74163;
+    margin-top:0px;
+    font-size: x-large;
+}
+.courseTypeSection{
+    display:flex;
+}
+.courseTypeSection>p{
+    border:1px solid #e74163;
+    padding:8px 10px;
+    margin-bottom:0px;
+    flex-grow:1;
+    text-align: center;
+    color:#e74163;
+    letter-spacing: 0.3px;
+    cursor:pointer;
+    font-size:14px;
+}
+.courseTypeSection>p:nth-child(1){
+    border-top-left-radius: 10px;
+    border-right:none;
+}
+.courseTypeSection>p:nth-child(2){
+    border-top-right-radius: 10px;
+}
+.courseTypeSection>.active{
+    background-color: #e74163;
+    color:white;
+    font-weight:500;
 }
 
+@media screen and (min-width:768px){
+    .coursesPage>h1{
+        font-size:xx-large;
+    }
+    .courseTypeSection>p{
+        flex-grow: 0;
+        font-size: large;
+        padding:10px 15px;
+    }
+}

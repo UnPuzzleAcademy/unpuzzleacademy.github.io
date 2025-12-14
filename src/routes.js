@@ -8,7 +8,8 @@ export let router = createBrowserRouter([
         children:[
             {index:true, Component:Pages.Home},
             {path:"courses", Component:Pages.Courses},
-            {path:"resources", Component:Pages.Resources}
+            {path:"resources", Component:Pages.Resources},
+            {path:"course/:courseId", Component:Pages.Course}
         ]
     }
 ])
