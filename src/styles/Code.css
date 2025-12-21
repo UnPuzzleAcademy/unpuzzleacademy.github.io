@@ -1,0 +1,26 @@
+code *{
+    /*font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;*/
+    font-family:Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+.code-block{
+    width:100%;
+    border:1px solid lightgray;
+    border-radius:5px;
+    overflow-x: auto;
+}
+.code-header{
+    padding:5px 5px 5px 10px;
+    background-color: #424242;
+    display:flex;
+    justify-content: space-between;
+}
+.code-header *{
+    color:white;
+}
+.code-header>button{
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+}

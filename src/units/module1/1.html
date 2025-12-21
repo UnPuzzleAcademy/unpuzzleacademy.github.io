@@ -1,19 +1,4 @@
-import React from 'react'
-import { useParams } from 'react-router'
-import './styles/Course.css'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus, prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import Code from './Code';
-import InlineCode from './InlineCode';
-//import SyntaxHighlighter from 'react-syntax-highlighter';
-// Choose a style (e.g., docco, monokai, atomOneDark)
-//import { defaultStyle, github, githubGist, googlecode, monokai, stackoverflowLight, vs, vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-
-const Course = () => {
-  const {courseId} = useParams();
-  return (
-    <div className="unit-container">
-      <section class="unit">
+<section class="unit">
 
   <h1 class="unit-title">Unit: Writing Your First PHP Code</h1>
 
@@ -38,7 +23,8 @@ const Course = () => {
     </p>
 
     <p class="section-text">
-      Any file containing PHP code must have the <InlineCode>.php</InlineCode> extension.
+      Any file containing PHP code must have the
+      <code class="inline-code">.php</code> extension.
     </p>
   </section>
 
@@ -49,13 +35,15 @@ const Course = () => {
       PHP code must be written inside special tags.
       These tags tell the server where PHP code begins and ends.
     </p>
-    <Code language='php' header='PHP'>
-      {
-`<?php
-  // PHP code goes here
-?>`
-      }
-    </Code>
+
+    <pre class="code-block">
+      <code class="code">
+&lt;?php
+// PHP code goes here
+?&gt;
+      </code>
+    </pre>
+
     <p class="section-text">
       <strong>&lt;?php</strong> is the opening tag.
     </p>
@@ -74,43 +62,44 @@ const Course = () => {
     <h2 class="section-title">3. Writing Your First PHP Program</h2>
 
     <p class="section-text">
-      Let’s write the traditional first program: <strong>Hello World</strong>.
+      Let’s write the traditional first program:
+      <strong>Hello World</strong>.
     </p>
 
-    <Code language='php' header='PHP'>
-      {
-`<?php
-  echo 'Hello World';
-?>`
-      }
-    </Code>
+    <pre class="code-block">
+      <code class="code">
+&lt;?php
+echo "Hello World";
+?&gt;
+      </code>
+    </pre>
 
     <p class="section-text">
       This is a complete PHP program.
       When the server runs this code, it sends
-      <strong> Hello World</strong> to the browser.
+      <strong>Hello World</strong> to the browser.
     </p>
   </section>
 
   <section class="unit-section">
-    <h2 class="section-title">4. What is echo?</h2>
+    <h2 class="section-title">4. What is <code class="inline-code">echo</code>?</h2>
 
     <p class="section-text">
       <strong>echo</strong> is used to output data from PHP to the browser.
     </p>
 
     <p class="section-text">
-      Whatever you pass to <strong>echo </strong>
+      Whatever you pass to <strong>echo</strong>
       is sent as output.
     </p>
 
-    <Code language='php' header='PHP'>
-      {
-`<?php
-  echo "This text will appear in the browser";
-?>`
-      }
-    </Code>
+    <pre class="code-block">
+      <code class="code">
+&lt;?php
+echo "This text will appear in the browser";
+?&gt;
+      </code>
+    </pre>
 
     <p class="section-text">
       Think of <strong>echo</strong> as PHP’s way of displaying something on the screen.
@@ -130,14 +119,15 @@ const Course = () => {
         Install a local server such as XAMPP, WAMP, or MAMP.
       </li>
       <li class="step-item">
-        Place your <InlineCode>echo</InlineCode> file inside the server root
-        folder (for example, <InlineCode>htdocs</InlineCode>).
+        Place your <code class="inline-code">.php</code> file inside the server root
+        folder (for example, <code class="inline-code">htdocs</code>).
       </li>
       <li class="step-item">
         Start the server (Apache).
       </li>
       <li class="step-item">
-        Open a browser and visit <InlineCode>http://localhost/yourfile.php</InlineCode>.
+        Open a browser and visit
+        <code class="inline-code">http://localhost/yourfile.php</code>.
       </li>
     </ol>
 
@@ -151,16 +141,17 @@ const Course = () => {
 
     <ul class="mistakes-list">
       <li class="mistake-item">
-        Forgetting the <InlineCode>&lt;?php</InlineCode> opening tag.
+        Forgetting the <code class="inline-code">&lt;?php</code> opening tag.
       </li>
       <li class="mistake-item">
-        Saving the file as <InlineCode>.html</InlineCode> instead of <InlineCode>.php</InlineCode>.
+        Saving the file as <code class="inline-code">.html</code> instead of
+        <code class="inline-code">.php</code>.
       </li>
       <li class="mistake-item">
         Trying to open a PHP file without a running server.
       </li>
       <li class="mistake-item">
-        Missing the semicolon <InlineCode>;</InlineCode> at the end of a statement.
+        Missing the semicolon <code class="inline-code">;</code> at the end of a statement.
       </li>
     </ul>
   </section>
@@ -174,7 +165,7 @@ const Course = () => {
 
     <ul class="summary-list">
       <li class="summary-item">
-        How to write PHP code using <InlineCode>&lt;?php ?&gt;</InlineCode>
+        How to write PHP code using <code class="inline-code">&lt;?php ?&gt;</code>
       </li>
       <li class="summary-item">
         How to use <strong>echo</strong> to display output
@@ -191,9 +182,3 @@ const Course = () => {
   </section>
 
 </section>
-
-    </div>
-  )
-}
-
-export default Course
