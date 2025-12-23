@@ -1,0 +1,80 @@
+# Writing Your First PHP Code
+
+In this unit, you will write your very first PHP program. You will learn how PHP code is written, how it is executed, and how PHP sends output to the browser. By the end of this unit, you will display **Hello World** using PHP.
+
+## What is PHP Code?
+
+PHP is a server-side scripting language. This means PHP code runs on a server, not inside the browser.
+
+The server processes the PHP code and sends the output (usually HTML or plain text) to the browser.
+
+Any file containing PHP code must have the `.php` extension.
+
+## PHP Opening and Closing Tags
+
+PHP code must be written inside special tags. These tags tell the server where PHP code begins and ends.
+
+
+```php,PHP
+<?php
+  // PHP code goes here
+?>
+```
+
+
+`<?php` is the opening tag.
+
+`?>` is the closing tag.
+
+Anything written outside these tags is treated as normal HTML, not PHP.
+
+## Writing Your First PHP Program
+
+Let’s write the traditional first program: **Hello World**.
+
+```php,PHP
+<?php
+  echo 'Hello World';
+?>
+```
+
+This is a complete PHP program. When the server runs this code, it sends **Hello World** to the browser.
+
+## What is echo?
+
+**echo** is used to output data from PHP to the browser.
+
+Whatever you pass to **echo** is sent as output.
+
+```php,PHP
+<?php
+  echo "This text will appear in the browser";
+?>
+```
+
+Think of **echo** as PHP’s way of displaying something on the screen.
+
+## How to Run a PHP File
+PHP files cannot be opened directly like HTML files. They must be executed by a server that supports PHP.
+
+1. Install a local server such as XAMPP, WAMP, or MAMP.
+2. Place your `echo` file inside the server root folder (for example, `htdocs`).
+3. Start the server (Apache).
+4. Open a browser and visit `http://localhost/yourfile.php`.
+
+The server executes the PHP code and sends the output to your browser.
+
+## Common Beginner Mistakes
+* Forgetting the `<?php` opening tag.
+* Saving the file as `.html` instead of `.php`.
+* Trying to open a PHP file without a running server.
+* Missing the semicolon `;` at the end of a statement.
+
+## Unit Summary
+In this unit, you learned:
+
+* How to write PHP code using `<?php ?>`
+* How to use **echo** to display output
+* How to run a PHP file using a local server
+
+You have now written and executed your first PHP program. In the next unit, you will learn about variables and data.
