@@ -2,7 +2,7 @@
     padding: 0px 30px;
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width:1024px){
     .unit-container{
         width:60%;
         margin:0px auto 50px auto;
