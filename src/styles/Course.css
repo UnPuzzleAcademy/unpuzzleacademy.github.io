@@ -1,14 +1,10 @@
-.unit-container{
-    padding: 0px 30px;
+.moduleInfo{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
 }
 
-@media screen and (min-width:1024px){
-    .unit-container{
-        width:60%;
-        margin:0px auto 50px auto;
-        /*border:1px solid lightgray;*/
-        padding:20px 50px 40px 50px;
-        border-radius:2px;
-        box-shadow: 0px 1px 5px 1.5px lightgray;
-    }
+.course-img{
+    width:200px;
+    height:200px;
 }

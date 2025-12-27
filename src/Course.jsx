@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import './styles/Course.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -11,14 +11,41 @@ import {MDXComponents} from './MDXComponents';
 //import SyntaxHighlighter from 'react-syntax-highlighter';
 // Choose a style (e.g., docco, monokai, atomOneDark)
 //import { defaultStyle, github, githubGist, googlecode, monokai, stackoverflowLight, vs, vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-
+import { courses } from './courses';
+import { modules } from './modules.js';
+import LoadingPlaceholder from './LoadingPlaceholder.jsx';
 const Course = () => {
   const {courseId} = useParams();
+  const course = courses[courseId];
+  let [img, setImg] = useState('');
+  useEffect(()=>{
+    const getImage = async () => {
+      try {
+        let img = await import('./assets/images/course.svg'); 
+        return img.default;
+      } catch (err) {
+        let img = await import('./assets/images/course.svg'); 
+        return img.default;
+      }
+    }
+    getImage().then((data)=>{
+      setImg(data);
+    });
+  },[]);
   return (
-    <div className="unit-container">
-      <MDXProvider components={MDXComponents}><Test/></MDXProvider>
+    <>
+    <div className="moduleInfo">
+      <div>
+        <div className="course-img">
+          <LoadingPlaceholder/>
+        </div>
+      </div>
+      <div>
+
+      </div>
     </div>
-  )
+    </>
+    );
 }
 
 export default Course
